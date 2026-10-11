@@ -16,7 +16,7 @@
     - nodejs
     - mysql
 
-    - name: create expense user
+  - name: create expense user
     ansible.builtin.user:
       name: expense
 
@@ -61,7 +61,7 @@
       login_password: ExpenseApp@1
       login_host: mysql.monicloud.online
       target: /app/schema/backend.sql
-      
+
   - name: daemon reload and restart service
     ansible.builtin.systemd_service:
       enabled: true
